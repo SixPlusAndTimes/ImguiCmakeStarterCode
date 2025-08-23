@@ -4,7 +4,7 @@
 
 **all libs built from source**
 
-**this starter project use opengl3 and sdl2 as imgui's backends**
+**this starter project use opengl3 and sdl2 as imgui's backends， and ourown diretory uses the corresponding example from imgui source code**
 
 ## how to build
 following commads will make debug target bydefault
