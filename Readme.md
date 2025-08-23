@@ -1,6 +1,6 @@
 # Imgui Cmake Starter
 ## notice
-**only tested on windows platform**
+**only tested on windows and wsl**
 
 **all libs built from source**
 
