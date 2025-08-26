@@ -12,9 +12,12 @@
 #endif
 
 #include <stdio.h>
+#include "spdlog/spdlog.h"
 
 int main(int, char**)
 {
+    spdlog::info("Welcome to spdlog!");
+    spdlog::error("Some error message with arg: {}", 1);
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
     {
         printf("Error: %s\n", SDL_GetError());
