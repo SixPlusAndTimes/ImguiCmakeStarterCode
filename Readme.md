@@ -16,11 +16,19 @@ cmake -S . -B .\cmake_build\
 cmake --build .\cmake_build\ 
 ~~~~
 
-Also can intall it, default intall path is "${CMAKE_CURRENT_SOURCE_DIR}/install", you can check it in CmakeLists.txt.  
+Default intallation path is "${CMAKE_CURRENT_SOURCE_DIR}/install", you can check it in CmakeLists.txt.  
 
-Note we should use --config Debug option here, because cmake intall command find Release target by default but we complie the Debug one only
+Note we should use --config Debug option here, because cmake intall command find Release target by default but if we complie the Debug one only, the following installation command step will complain
 
 ~~~shell
 cmake --install .\cmake_build\ --config Debug 
 ~~~
-If you want intall it at another dir, just modify the default intallation path in CmakeLists.txt, or overrite it in command line option using `-DINSTALL_PREFIX="custom_install"`
+
+If you want intall it at another dir, just modify the default intallation path in CmakeLists.txt, or overwrite it in command line option using `-DINSTALL_PREFIX="custom_install"`
+
+# references
+[sdl2](https://github.com/libsdl-org/SDL)
+
+[imgui](https://github.com/ocornut/imgui)
+
+[imnode](https://github.com/Nelarius/imnodes)
