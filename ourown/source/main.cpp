@@ -12,12 +12,15 @@
 #endif
 
 #include <stdio.h>
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
 #include "spdlog/spdlog.h"
+#include "spdlog/sinks/stdout_sinks.h"
 
 int main(int, char**)
 {
-    spdlog::info("Welcome to spdlog!");
-    spdlog::error("Some error message with arg: {}", 1);
+    spdlog::set_pattern("[%Y-%m-%d %H:%M:%S.%e][%l][%s:%#]: %v");
+    SPDLOG_INFO("global log with source info"); // Use spdlog::default_logger()
+
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
     {
         printf("Error: %s\n", SDL_GetError());
